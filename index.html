@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Calculator</title>
+    <script type="text/javascript" src="js/formcalculations.js"></script>
+    <script type="text/javascript" src="js/formular1.js"></script>
+    <link href="styles/cakeform.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload='hideTotal()'>
+    <div id="wrap">
+        <form action="" id="formular1" onsubmit="return false;">
+        <div>
+            <div class="cont_order">
+               <fieldset>
+                <legend>สูตรสีเทอร์โมพลาสติก</legend>
+                <label >ปริมาณงานสีเทอร์โมพลาสติก(ตารางเมตร)</label>
+				<input type='text' name='area' id='area' value='1' size='26' onchange="quantity()" />
+				<br/>
+				<label >ความหนา(มิลลิเมตร)</label>
+				<input type='text' name='tick' id='tick' value='1' size='26' onchange="quantity()" />
+				<br/>
+				
+				<div id="quantity"></div>
+				<br/>
+				
+               
+                </fieldset>
+            </div>
+            
+        	
+            <input type='submit' id='submit' value='Submit' onclick="quantity()" />
+        </div>  
+       </form>
+	</div><!--End of wrap-->
+
+</body>
+</html>
