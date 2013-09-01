@@ -31,6 +31,42 @@ function quantity(){
 		;	
 }
 
+
+function lenght(){
+	 
+	
+
+		var theForm = document.forms["formular1"];
+		
+		var selectedBag = theForm.elements["bag"];
+
+		var bag = parseFloat(selectedBag.value);
+		
+		var selectedTick = theForm.elements["tick2"];
+    
+		var tick = parseFloat(selectedTick.value);
+		
+		var selectedWide = theForm.elements["wide"];
+    
+		var wide = parseFloat(selectedWide.value);
+		
+		
+		
+		// calculation
+		
+		
+		
+		var lenght = bag/tick/wide*1000*4/4;
+		
+		
+				
+		// display
+			
+		var divlenght = document.getElementById('lenght');
+		 divlenght.style.display='block';
+		 divlenght.innerHTML = "ความยาวที่ได้ "+ lenght.toFixed(2) + " เมตร";	
+}
+
 function hide()
 {
     var divobj = document.getElementById('quantity');
