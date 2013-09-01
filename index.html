@@ -3,11 +3,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Calculator</title>
-    <script type="text/javascript" src="js/formcalculations.js"></script>
+   
     <script type="text/javascript" src="js/formular1.js"></script>
     <link href="styles/cakeform.css" rel="stylesheet" type="text/css" />
 </head>
-<body onload='hide()'>
+<body onload="quantity();lenght();">
     <div id="wrap">
         <form action="" id="formular1" onsubmit="return false;">
         <div>
@@ -16,10 +16,10 @@
                 <legend>ตารางจำนวนสีเทอร์โมพลาสติก ลูกแก้วสะท้อนแสง น้ำยาไพรเมอร์เทียบที่ต้องใช้</legend>
                 
                 <label >ปริมาณงานสีเทอร์โมพลาสติก(ตารางเมตร)</label>
-				<input type='text' name='area' id='area' value='1' size='26' onchange="quantity()" />
+				<input type='text' name='area' id='area' value='10000' size='26' onchange="quantity()" />
 				<br/>
 				<label >ความหนา(มิลลิเมตร)</label>
-				<input type='text' name='tick' id='tick' value='1' size='26' onchange="quantity()" />
+				<input type='text' name='tick' id='tick' value='50' size='26' onchange="quantity()" />
 				<br/>
 				
 				
@@ -29,9 +29,34 @@
                
                 </fieldset>
             </div>
+           
+            <input type='submit' id='submit' value='คำนวณ' onclick="quantity()" />
+            
+            <div class="cont_order">
+            	<fieldset>
+                <legend>ตารางเทียบปริมาณงานที่ได้</legend>
+                
+                <label>จำนวนถุงสีเทอร์โมพลาสติก</label>
+				<input type='text' name='bag' id='bag' value='100' size='26' onchange="lenght()" />
+				<br/>
+				<label >ความหนา(มิลลิเมตร)</label>
+				<input type='text' name='tick2' id='tick2' value='3' size='26' onchange="lenght()" />
+				<br/>
+				<label >ความกว้าง(มิลลิเมตร)</label>
+				<input type='text' name='wide' id='wide' value='10' size='26' onchange="lenght()" />
+				<br/>
+				
+				
+				<div id="lenght"></div>
+				<br/>
+				
+               
+                </fieldset>
+            </div>
             
         	
-            <input type='submit' id='submit' value='Calculate' onclick="quantity()" />
+            <input type='submit' id='submit' value='คำนวณ' onclick="lenght()" />
+
         </div>  
        </form>
 	</div><!--End of wrap-->
